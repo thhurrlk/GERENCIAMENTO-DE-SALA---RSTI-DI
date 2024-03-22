@@ -1,0 +1,104 @@
+    
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+  
+    .raindrop {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: red;
+      pointer-events: none;
+    }
+  </style>
+<title>HOTEL SUICÍDIO PROIBIDO</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #3b3b3b;
+    text-align: center;
+  }
+  li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000000; 
+  }
+
+  h2 {
+    text-shadow: 2px 2px 5px rgb(255, 0, 0);
+    color: #000000;
+
+  }
+
+  h1 {
+    font-size: 36px;
+    color: #000000;
+    text-shadow: 2px 2px 5px rgb(255, 0, 0);
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgb(255, 208, 0);
+  }
+
+  li::before {
+    content: ">";
+    color: #000000;
+    margin-right: 5px;
+    text-shadow: 2px 2px 5px rgb(255, 208, 0);
+  }
+</style>
+</head>
+<body>
+  <h1>HOTEL SUICÍDIO PROIBIDO</h1>
+  <ul>
+    <li>Arthur Müller</li>
+    <li>Rafael Bauer</li>
+    <li>Jozue Bueno</li>
+    <li>Vagner Vogel</li>
+    <li>Cristian Collet</li>
+  </ul>
+  <h2>Nosso grupo criou uma série de comandos que permite ao usuário fazer a reserva de quartos, denunciar problemas para o admin ou sair. Em nossa área de administração, desenvolvemos um código que abre um painel, permitindo criar novos quartos com uma variedade de IDs, excluir quartos e visualizar a lista de quartos ocupados. Optamos por dois tipos de quartos o VIP e COMUM, onde o usuário pode escolher entre essas duas opções. O trabalho em equipe foi excelente, todos se ajudaram, dedicaram-se ao objetivo final. 😁🔪☠️</h2>
+  <img class="hotel-image" src="novela1.jpg" alt="Foto do Hotel">
+  
+  <script>
+    //window.onload = function() {
+      createRain();
+    //};
+
+    function createRain() {
+      const rainContainer = document.createElement('div');
+      rainContainer.classList.add('rain-container');
+      document.body.appendChild(rainContainer);
+
+      setInterval(() => {
+        const raindrop = document.createElement('div');
+        raindrop.classList.add('raindrop');
+        raindrop.style.left = `${Math.random() * window.innerWidth}px`;
+        rainContainer.appendChild(raindrop);
+
+        const animationDuration = Math.random() * 3 + 1; // Between 1 and 4 seconds
+        raindrop.style.animation = `fall ${animationDuration}s linear infinite`;
+
+        setTimeout(() => {
+          raindrop.remove();
+        }, animationDuration * 1000);
+      }, 100);
+    }
+  </script>
+</body>
+</html>
