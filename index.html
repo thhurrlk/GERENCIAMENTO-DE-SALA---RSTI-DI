@@ -1,15 +1,44 @@
-    
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<section class="rain"></section>
+<link rel="stylesheet" href="chuva.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+
 <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-      background-color: black;
-    }
+  #iniciar{
+    background-color: black; /* Fundo preto */
+    color: rgb(48, 48, 48); /* Cor das letras */
+    text-shadow: 1px 1px red; /* Sombra vermelha no texto */
+    border: 2px solid red; /* Borda vermelha */
+    padding: 20px 30px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor ao passar o mouse */
+    box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.5); /* Profundidade vermelha */
+  }
+  #iniciar:hover {
+    background-color: rgb(70, 70, 70); /* Mudança de cor ao passar o mouse */
+    box-shadow: 0px 6px 12px rgba(255, 0, 0, 0.7); /* Profundidade maior */
+  }
+
+  #iniciar:active {
+    background-color: darkred; /* Mudança de cor ao clicar */
+    box-shadow: 0px 2px 4px rgba(255, 0, 0, 0.7); /* Profundidade menor */
+  }
+
+  body {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #202020, #111119);
+    background-size: cover;
+    background-position: center;
+    
+    
+  
+  }  
   
     .raindrop {
       position: absolute;
@@ -18,13 +47,19 @@
       background-color: red;
       pointer-events: none;
     }
-  </style>
+</style>
 <title>HOTEL SUICÍDIO PROIBIDO</title>
 <style>
   body {
-    font-family: Arial, sans-serif;
-    background-color: #3b3b3b;
+    font-family: 'Playfair Display', serif;
     text-align: center;
+    background: linear-gradient(to bottom, #202020, #111119);
+    background-image: url(minecraft1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: #0e0e0e8a ;
   }
   li {
     font-size: 18px;
@@ -52,18 +87,34 @@
   li {
     font-size: 25px;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgb(255, 208, 0);
+    text-shadow: 2px 2px 5px rgb(255, 0, 0);
   }
 
   li::before {
     content: ">";
     color: #000000;
     margin-right: 5px;
-    text-shadow: 2px 2px 5px rgb(255, 208, 0);
+    text-shadow: 2px 2px 5px rgb(255, 0, 0);
   }
+
+  div#output {
+    margin: 40px auto;
+    width: 70%;
+    background-color: #00000069;
+    min-height: 400px;
+    padding: 2rem;
+    text-align: left;
+    text-shadow: 4px 4px rgba(0, 0, 0, 0.541);
+    color: #ff0000;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 40px; 
+}
 </style>
 </head>
-<body>
+<body class="back-row-toggle splat-toggle">
+  <div class="rain front-row"></div>
+  <div class="rain back-row"></div>
   <h1>HOTEL SUICÍDIO PROIBIDO</h1>
   <ul>
     <li>Arthur Müller</li>
@@ -72,33 +123,11 @@
     <li>Vagner Vogel</li>
     <li>Cristian Collet</li>
   </ul>
+  <button id="iniciar">Clique aqui para abrir o painel de reserva</button>
+  <div id="output">&nbsp;</div>
   <h2>Nosso grupo criou uma série de comandos que permite ao usuário fazer a reserva de quartos, denunciar problemas para o admin ou sair. Em nossa área de administração, desenvolvemos um código que abre um painel, permitindo criar novos quartos com uma variedade de IDs, excluir quartos e visualizar a lista de quartos ocupados. Optamos por dois tipos de quartos o VIP e COMUM, onde o usuário pode escolher entre essas duas opções. O trabalho em equipe foi excelente, todos se ajudaram, dedicaram-se ao objetivo final. 😁🔪☠️</h2>
-  <img class="hotel-image" src="novela1.jpg" alt="Foto do Hotel">
-  
-  <script>
-    //window.onload = function() {
-      createRain();
-    //};
-
-    function createRain() {
-      const rainContainer = document.createElement('div');
-      rainContainer.classList.add('rain-container');
-      document.body.appendChild(rainContainer);
-
-      setInterval(() => {
-        const raindrop = document.createElement('div');
-        raindrop.classList.add('raindrop');
-        raindrop.style.left = `${Math.random() * window.innerWidth}px`;
-        rainContainer.appendChild(raindrop);
-
-        const animationDuration = Math.random() * 3 + 1; // Between 1 and 4 seconds
-        raindrop.style.animation = `fall ${animationDuration}s linear infinite`;
-
-        setTimeout(() => {
-          raindrop.remove();
-        }, animationDuration * 1000);
-      }, 100);
-    }
-  </script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="chuva.js"></script>
+  <script src="codigocompleto.js"></script>
 </body>
 </html>
