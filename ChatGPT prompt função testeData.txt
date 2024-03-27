@@ -1,0 +1,31 @@
+eu tenho a seguinte função em javascript:
+function testeDataInicial () { 
+while(dataInicial>=horaInicialReservaExistente && dataInicial<=horaFinalReservaExistente) 
+{alert(`Selecione um horário de início antes das ${hh:mm} do dia ${dd/mm/aaaa} ou após às ${hh:mm} do dia ${dd/mm/aaaa}`); 
+dataInicial=0; 
+digitarDataInicial()} 
+if(dataInicial<horaTesteIni || dataInicial>horaTesteFin){digitarDataFinal()} 
+}
+
+ela compara uma variável de horário dataInicial=new Date (ano,mes,dia,hora,minuto) com uma variável de horário existente num array de objetos e exibe uma mensagem de erro para eu escolher outro horário.
+ o meu array de objetos será como o seguinte:
+ 
+var reservas=[
+    { 
+        
+        numeroReserva: 1, 
+        numeroQuarto: 10, 
+        horaInicial: dataInicial,
+        horaFinal: dataFinal 
+    },
+    { 
+        
+        numeroReserva: 2, 
+        numeroQuarto: 11, 
+        horaInicial: dataInicial,
+        horaFinal: dataFinal 
+    },
+
+    ];
+
+preciso que você reescreva a function testeDataInicial, alterando o texto horaInicialReservaExistente para um código que percorra todos horaInicial dos objetos do meu array. altere se necessário a mensagem alert para me indicar possíveis dataInicial que posso digitar ou simplesmente uma mensagem de horário indisponivel
