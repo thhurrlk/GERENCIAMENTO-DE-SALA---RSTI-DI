@@ -1,3 +1,4 @@
+
 document.getElementById("iniciar").addEventListener("click", displayDate);
 function displayDate (){
     
@@ -31,21 +32,6 @@ function objectToPlaintext(obj, indent = 0) {
     return plaintext;
 }
 
-// Example usage:
-const obj = {
-    name: 'John Doe',
-    age: 30,
-    address: {
-        street: '123 Main St',
-        city: 'Anytown',
-        country: 'USA'
-    },
-    hobbies: ['Reading', 'Hiking'],
-    friends: [
-        { name: 'Alice', age: 28 },
-        { name: 'Bob', age: 32 }
-    ]
-};
 
 const plaintext = objectToPlaintext(obj);
 console.log(plaintext);
@@ -54,3 +40,6 @@ console.log(plaintext);
 function changeText(text){
     document.getElementById("output").innerText = text;
 }
+
+
+
