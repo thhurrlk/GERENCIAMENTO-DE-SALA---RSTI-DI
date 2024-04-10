@@ -3,8 +3,4 @@ var database = {
     reservasdb: [{}]
 }
 
-<<<<<<< HEAD
-export { database };    
-=======
 export { database };
->>>>>>> b347215966bb4c8eebab58a143bff06422490398

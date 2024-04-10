@@ -1,4 +1,3 @@
-
 import { database } from './objetos.js';
 import { Reserva } from './classes.js';
 
@@ -218,4 +217,3 @@ addEventListener("DOMContentLoaded", function() {
     document.getElementById("menu-usuario").addEventListener("click",menuPrincipal);
 
 });
-

@@ -52,11 +52,4 @@ class Reserva {
     }
 }
 
-<<<<<<< HEAD
-function changeText(text){
-    document.getElementById("output").innerText = text;
-}
-=======
->>>>>>> b347215966bb4c8eebab58a143bff06422490398
-
 export { Reserva, Quarto };
