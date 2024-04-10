@@ -2,11 +2,14 @@
 <html lang="pt-br">
 <head>
   
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<section class="rain"></section>
-<link rel="stylesheet" href="chuva.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <section class="rain"></section>
+  <link rel="stylesheet" href="chuva.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+  <script type="module" src="index.js"></script>
+  
+  
 
 <style>
   #iniciar{
@@ -23,7 +26,7 @@
     background-color: rgb(70, 70, 70); 
     box-shadow: 0px 6px 12px rgba(0, 110, 255, 0.7); 
   }
-
+ 
   #iniciar:active {
     background-color: rgb(10, 46, 41); 
     box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.7); 
@@ -54,12 +57,12 @@
     font-family: 'Playfair Display', serif;
     text-align: center;
     background: linear-gradient(to bottom, #202020, #111119);
-    background-image: url(Samara.jpeg);
+    background-image: url(./Samara.jpeg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    background-color: #000000 ;
+    background-color: #000000b0 ;
     overflow-x: hidden;
   }
   li {
@@ -77,7 +80,7 @@
   h1 {
     font-size: 50px;
     color: #000000;
-    text-shadow: 2px 2px 5px rgb(0, 174, 255);
+    text-shadow: 2px 2px 5px rgb(0, 255, 0);
   }
 
   ul {
@@ -87,7 +90,7 @@
     li {
     font-size: 35px;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgb(0, 247, 255);
+    text-shadow: 2px 2px 5px rgb(0, 255, 13);
   } 
     li::before {
     content: ">";
@@ -95,20 +98,32 @@
     margin-right: 20px; 
     text-shadow: 2px 2px 5px rgb(0, 225, 255);
   }
-
-  div#output {
-    margin: 40px auto;
-    width: 70%;
-    background-color: #00000069;
-    min-height: 400px;
-    padding: 2rem;
-    text-align: left;
-    text-shadow: 4px 4px rgba(0, 0, 0, 0.541);
-    color: #008cff;
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    font-size: 40px; 
+  .btns{
+    background-color: #222222; /* Cor de fundo */
+  border: none; /* Sem borda */
+  color: white; /* Cor do texto */
+  padding: 20px 32px; /* Espaçamento interno */
+  text-align: center; /* Alinhamento do texto */
+  text-decoration: none; /* Sem decoração de texto */
+  display: inline-block; /* Exibir como bloco */
+  font-size: 16px; /* Tamanho da fonte */
+  margin: 4px 2px; /* Margem */
+  cursor: pointer; /* Cursor do mouse */
+  border-radius: 10px; /* Raio do canto */
+  transition-duration: 0.4s; /* Duração da transição */
 }
+
+.btns:hover {
+  background-color: #02d40c; /* Cor de fundo ao passar o mouse */
+  color: white; /* Cor do texto ao passar o mouse */
+  
+  -webkit-box-shadow: 0px 0px 25px 4px #13ce22c9;
+  -moz-box-shadow: 0px 0px 25px 4px #0daa0da9;
+  box-shadow: 0px 0px 25px 4px #0be40ba9;
+}
+
+  
+  
 </style>
 </head>
 <body class="back-row-toggle splat-toggle">
@@ -120,11 +135,16 @@
     <li>Rafael Bauer</li>
     <li>Cristian Collet</li>
   </ul>
-  <button id="iniciar">Clique aqui para abrir o painel de reserva</button>
-  <div id="output">&nbsp;</div>
+  
+  <button class="btns" id="menu-usuario">MENU USÚARIO🛏️</button>
+  <button class="btns" id="painel-admin">PAINEL DA ADMINISTRAÇÃO☠️</button>
+
   <h2>Nosso grupo criou uma série de comandos que permite ao usuário fazer a reserva de quartos, denunciar problemas para o admin ou sair. Em nossa área de administração, desenvolvemos um código que abre um painel, permitindo criar novos quartos com uma variedade de IDs, excluir quartos e visualizar a lista de quartos ocupados. Optamos por dois tipos de quartos o VIP e COMUM, onde o usuário pode escolher entre essas duas opções. O trabalho em equipe foi excelente, todos se ajudaram, dedicaram-se ao objetivo final. 😁🔪☠️</h2>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="chuva.js"></script>
-  <script src="codigocompleto.js"></script>
+  <script type="module" src="classes.js"></script>
+  <!-- script src="codigocompleto.js"></script-->
+  
+  
 </body>
 </html>
