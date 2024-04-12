@@ -1,3 +1,13 @@
+/* DOCUMENTAÇÃO - HOTEL SUICIDIO PROIBIDO
+
+O programa abaixo foi criado para a administração de um Hotel, permitindo o úsuario fazer uma reserva, relatar
+um problema, sair do hotel
+
+
+*/
+
+
+
 import { database } from './objetos.js';
 import { Reserva } from './classes.js';
 
@@ -43,7 +53,7 @@ function menuAdmin() {
             lerQuartos();
             continue;
         } else if (opcaoAdmin === 4 || opcaoAdmin === 'voltar' || opcaoAdmin === 'VOLTAR') {
-            menuPrincipal();
+            //menuPrincipal();
             break;
         } else {
             continue;
