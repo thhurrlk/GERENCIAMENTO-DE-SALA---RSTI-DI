@@ -1,10 +1,32 @@
 /* DOCUMENTAÇÃO - HOTEL SUICIDIO PROIBIDO
+O programa abaixo foi criado para a administração de um Hotel, permitindo o úsuario fazer uma reserva,
+ relatar um problema, sair do hotel, cancelar uma reserva e Listar os quartos disponiveis... 
+ abaixo vou passar um guia rapido de como funciona o código.
 
-O programa abaixo foi criado para a administração de um Hotel, permitindo o úsuario fazer uma reserva, relatar
-um problema, sair do hotel
+-- Funcionalidades Principais --
+* 1. Menu Principal: Permite aos usuários realizar operações como reservar um quarto, cancelar uma 
+reserva,listar quartos disponíveis e sair do hotel.
+* 2. Menu de Administração: Fornece funcionalidades exclusivas de administração, como adicionar ou 
+remover quartos e Listar todos os quartos disponíveis.
+* 3. Adicionar Quarto: Permite adicionar um novo quarto ao sistema, especificando seu tipo e descrição.
+* 4. Listar Quartos: Mostra a Lista de todos os quartos disponíveis no sistema.
+* 5. Remover Quarto: Permite remover um quarto existente do sistema.
+* 6. Nova Reserva: Permite fazer uma nova reserva de quarto, registrando-a no sistema.
+* 7. Cancelar Reserva: Permite cancelar uma reserva existente.
+* 8. Listar Quartos Disponíveis: Mostra a Lista de quartos disponíveis para reserva.
+Os menus foram feito a partir de else, else if e braks... Botando cada número para ter uma funcionalidade 
+dentro dos prompts. Quando o úsuario digitar ou fazer algum comando errado, o programa ativara as 
+funções de 'alerts' para alertar o úsuario o seu erro... com os 'breaks' poderemos parar os prompts 
+ou voltar alguma função.
 
+No inicio do codigo pode-se perceber que usamos imports de outras classes, dentro desses imports 
+contem um código, encontrado no classes e no objetos.js, e tudo que fizermos nos prompts ficam 
+salvos em um banco de dados temporario que fica ativo naquele momento, para podermos se mover de 
+um prompt para outro, e quando atualizamos o site apaga todas as informações. |
 
-*/
+Autores: Arthur, Rafael e Cristian
+* Data de Criação: 15/03/24
+* ULtima Atualizacdo: 11/04/2024 */
 
 
 
